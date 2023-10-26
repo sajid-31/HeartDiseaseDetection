@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-A</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+
+            <h3>Age?(In Years)</h3><br><input id="second" name="Age" required="required">
+
+            <h3>RestingBP</h3><input id="third" name="RestingBP" required="required">
+
+            <h3>Cholestrol</h3><br><input id="fourth" name="Cholesterol" required="required">
+
+            <h3>MaxHR</h3><br><input id="fifth" name="MaxHR" required="required">
+
+            <h3>oldpeak</h3><br><input id="sixth" name="Oldpeak" required="required">
+
+            <h3>Sex</h3><br><select name="Sex" id="Sex" required="required">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+
+            <h3>Chestpain</h3><br><select name="Chestpain" id="Chestpain" required="required">
+                <option value="ATA">ATA</option>
+                <option value="NAP">NAP</option>
+                <option value="ASY">ASY</option>
+                <option value="TA">TA</option>
+            </select>
+
+            <h3>FastingBS</h3><br><select name="FastingBS" id="FastingBS" required="required">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+
+
+            <h3>RestingECG</h3><br><select name="RestingECG" id="RestingECG" required="required">
+                <option value="Normal">Normal</option>
+                <option value="LVH">LVH</option>
+                <option value="ST">ST</option>
+            </select>
+
+
+            <h3>Exercise Angina</h3><br><select name="ExerciseAngina" id="ExerciseAngina" required="required">
+                <option value="N">N</option>
+                <option value="Y">Y</option>
+            </select>
+
+            <h3>st slope</h3><br><select name="ST_Slope" id="ST_Slope" required="required">
+                <option value="Flat">Flat</option>
+                <option value="Up">Up</option>
+                <option value="Down">Down</option>
+            </select>
+
+
+            <br><br><button id="sub" type="submit ">  **RESULT**   </button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
